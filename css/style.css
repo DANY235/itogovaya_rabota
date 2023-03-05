@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Play', sans-serif;
+}
+
+body {
+    background-color: #010922;
+}
+
+.header_container {
+    width: 1280px;
+    margin: 0 auto;
+    border-bottom: 1px solid #8184D9;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.header_container h2 {
+    font-weight: 700;
+    font-size: 24px;
+    color: white;
+    margin-left: 30px;
+}
+
+.nav {
+    width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.nav_item {
+    width: 140px;
+    height: 55px;
+    font-weight: 400;
+    font-size: 20px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    text-decoration: none;
+}
+
+.nav_item:hover {
+    transition: all 0.5s;
+    background-color: #8184D9;
+}
+
+.block1 {
+    width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.block1_text {
+    display: flex;
+    flex-direction: column;
+
+    font-weight: 400;
+    font-size: 20px;
+    color: white;
+}
+
+.block1_text h1 {
+    font-weight: 700;
+    font-size: 32px;
+}
+
+.block1_text .list {
+    margin-left: 20px;
+}
+
+.block1_text p {
+    margin: 25px 0;
+    margin-bottom: 10px;
+}
+
+.container2 {
+    width: 100vw;
+    background-color: #8184D9;
+    margin-top: 40px;
+}
+
+.block2 {
+
+    margin: 0 auto;
+    width: 1280px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 64px 0;
+}
+
+.block2_h2 h2 {
+    font-weight: 700;
+    font-size: 32px;
+    margin-bottom: 54px;
+    color: white;
+}
+
+.block2-items {
+    width: 80%;
+    width: 1114px;
+    margin-bottom: 54px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.block2_item {
+    max-width: 530px;
+    background-color: white;
+    padding: 60px;
+    border-radius: 8px;
+}
+
+.block2_item_h3 {
+    font-weight: 700;
+    font-size: 24px;
+    margin-top: 5px;
+    margin-bottom: 37px;
+    color: #332B66;
+}
+
+.block2_item_p {
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.basics_container {
+    width: 100vw;
+    background-color: #fff;
+}
+
+.basics_block {
+    width: 1280px;
+    margin: 0 auto;
+    padding: 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.basics_h2 h2 {
+    font-weight: 700;
+    font-size: 40px;
+    color: #332B66;
+    margin-bottom: 48px;
+}
+
+.basics_skills {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-form_container {
+    width: 100vw;
+}
+
+.contact-form_block {
+    width: 1200px;
+    margin: 85px auto;
+    border: 6px solid #8184D9;
+    border-radius: 5px;
+}
+
+.feedback-form_block {
+    width: 620px;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.feedback-form-header {
+    font-weight: 700;
+    font-size: 22px;
+    color: white;
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.feedback-form_content {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-box {
+    width: 600px;
+    margin-bottom: 16px;
+    border-radius: 10px;
+    border: #8184D9 3px solid;
+    padding: 13px 42px;
+    text-decoration: none;
+    box-shadow: 0 0 12px #8184D9;
+
+    font-weight: 400;
+    font-size: 20px;
+}
+
+
+
+.button {
+    border-radius: 10px;
+    background-color: #8184D9;
+    border: none;
+    color: white;
+    padding: 13px 42px;
+    text-decoration: none;
+    box-shadow: 0 0 10px #8184D9;
+
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+}
+
+.footer {
+    width: 100vw;
+    background-color: #8184D9;
+    margin: 0 auto;
+    padding: 38px;
+}
+
+.footer_block {
+    width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+}
+
+.footer-logo img {
+    margin-right: 30px;
+}
+
+.footer-logo h2 {
+    color: white;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.footer-text {
+    color: white;
+    font-weight: 400;
+    font-size: 20px;
+}
