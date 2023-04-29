@@ -8,7 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>    
     <title>Итоговая работа</title>
 </head>
 
@@ -16,11 +17,16 @@
 
     <header>
         <div class="header_container">
-            <div>
-                <img src="img/logo.svg" alt="лого">
+            <div class="header_logo">
+                <div>
+                    <img src="img/logo.svg" alt="лого">
+                </div>
+                <div>
+                    <h2>WebGenius</h2>
+                </div>
             </div>
             <div>
-                <h2>WebGenius</h2>
+                <button onclick="changeColor(indicator)" class="change_color" id="change_color">Светлая тема</button>
             </div>
         </div>
     </header>
@@ -31,10 +37,27 @@
         <a class="nav_item" href="#">О нас</a>
         <a class="nav_item" href="#pluses">Плюсы</a>
         <a class="nav_item" href="#basics">Основы</a>
-        <a class="nav_item" href="#">Контакты</a>
+        <a class="nav_item" href="#" onclick="openModal()">Контакты</a>
         <a class="nav_item" href="#">Блог</a>
     </nav>
 
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Контакты</h2>
+            </div>
+            <div class="modal-body">
+                <p>Для того, чтобы связаться с нами, вы можете написать нам на почту
+            или позвонить по телефону</p> <br>
+                <p>Телефон</p>
+                <a href="tel:+7999556573">+7999556573</a> <br>
+                <br>
+                <p>E-mail</p>
+                <a href="mailto:admil@maili.ru">Написать: admin@maili.ru</a>
+            </div>
+        </div>
+    </div>
 
     <main>
         <article class="block1">
@@ -115,7 +138,20 @@
         </article>
 
 
-        <article class="basics_container" id="basics">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="img/css.png" alt=""></div>
+                <div class="swiper-slide"><img src="img/html.png" alt=""></div>
+                <div class="swiper-slide"><img src="img/JavaScript.png" alt=""></div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+
+
+        <!-- <article class="basics_container" id="basics">
             <div class="basics_block">
                 <div class="basics_h2">
                     <h2>Основы</h2>
@@ -126,7 +162,7 @@
                     <div class="basics_skill"><img src="img/JavaScript.png" alt=""></div>
                 </div>
             </div>
-        </article>
+        </article> -->
 
 
         <section class="contact-form_container">
@@ -136,10 +172,12 @@
                         Хочешь получать полезные обучающие рассылки от нас?
                         Нужно только заполнить форму!
                     </div>
-                    <form action="#">
+                    <form action="#" id="feedback-form">
                         <div class="feedback-form_content">
-                            <input type="text" placeholder="Имя" class="input-box">
-                            <input type="email" placeholder="Email" class="input-box">
+                            <input type="text" placeholder="Имя" class="input-box" id="name">
+                            <input type="email" placeholder="Email" class="input-box" id="email">
+                            <input type="number" placeholder="Телефон" class="input-box" id="phone">
+                            <input type="text" placeholder="Напишите нам" class="input-box" id="free-text">
                             <input type="submit" value="Отправить" class="button">
                         </div>
                     </form>
@@ -162,6 +200,30 @@
         </div>
     </footer>
 
+    <script src="script.js"></script>
+    
+    <script type="module">
+        import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.esm.browser.min.js' 
+        var swiper = new Swiper(".mySwiper", {
+            loop: true,
+            keyboard: {
+                enabled: true,
+            },
+            autoplay: {
+                disableOnInteraction: false,
+                delay: 2500,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                dynamicBullets: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+        
+    </script>
 </body>
 
 </html>
